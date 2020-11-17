@@ -7,9 +7,28 @@
   background-color: #4056A1 ;
   height: 120px;
   padding: 1.5em;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 span {
   display: flex;
   font-family: 'Bungee', cursive;
+}
+
+#writingInNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.writeTweetHeader {
+  margin-bottom: 0;
+}
+
+#downArrow {
+  color: red;
+  height: 20px;
 }

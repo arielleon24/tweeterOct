@@ -1,0 +1,86 @@
+.new-tweet {
+  padding-top: 150px;
+  width: 100%
+}
+
+.tweet-form {
+  background: transparent;
+}
+
+button {
+  color: white;
+  background-color: #4056A1 ;
+  font-family: 'Bungee', cursive;
+}
+
+#underText {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tweet-text {
+  border: transparent;
+  background: transparent;
+  border-bottom: black solid;
+  height: 50px;
+  width: 100%;
+}
+
+.lessThan0 {
+  color: red;
+}
+
+.posted-tweets {
+  display: flex;
+  width: 100%;
+  margin-top: 60px;
+  flex-direction: column;
+  border: black solid;
+  opacity: 0.5;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#top-of-tweet {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.article-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
+}
+
+.article-footer {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  border-top: black solid;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.tweet-Avatar {
+  height: 100px;
+}
+
+.tweet-user {
+  display: none;
+}
+.posted-tweets:hover {
+  opacity: 1;
+  box-shadow: 3px 3px;
+}
+
+.posted-tweets:hover .tweet-user {
+  display: block;
+}
