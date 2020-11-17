@@ -1,5 +1,5 @@
 .new-tweet {
-  padding-top: 150px;
+  padding-top: 20px;
   width: 100%
 }
 
@@ -22,7 +22,6 @@ button {
   border: transparent;
   background: transparent;
   border-bottom: black solid;
-  height: 50px;
   width: 100%;
 }
 
@@ -35,14 +34,17 @@ button {
   width: 100%;
   margin-top: 60px;
   flex-direction: column;
-  border: black solid;
-  opacity: 0.5;
+  
+  
 }
 
 article {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 30px;
+  border: black solid;
+  opacity: 0.5;
 }
 
 #top-of-tweet {
@@ -54,7 +56,6 @@ article {
 .article-content {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   margin: 10px;
 }
@@ -76,11 +77,11 @@ article {
 .tweet-user {
   display: none;
 }
-.posted-tweets:hover {
+article:hover {
   opacity: 1;
   box-shadow: 3px 3px;
 }
 
-.posted-tweets:hover .tweet-user {
+article:hover .tweet-user {
   display: block;
 }
