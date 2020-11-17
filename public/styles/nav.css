@@ -1,0 +1,15 @@
+.navElements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background-color: #4056A1 ;
+  height: 120px;
+  padding: 1.5em;
+}
+
+span {
+  display: flex;
+  font-family: 'Bungee', cursive;
+}
