@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00b554;
+  color: white;
+  padding-top: 2.5em;
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+}
+
+#profileImage {
+  border-radius: 50%;
+  height: 250px;
+}
