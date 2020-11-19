@@ -22,6 +22,7 @@
     <!-- App JS -->
     <script type="text/javascript" defer src="/scripts/client.js"></script>
     <script type="text/javascript" defer src="/scripts/composer-char-counter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -36,7 +37,7 @@
     </nav>
     
 
-    <!-- HEADER -->
+    <!-- HEADER --> 
 
     <header id="headerTop">
       <div>
@@ -52,7 +53,6 @@
     <main class="container">
 
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form class="tweet-form" method="POST" action="/tweets">
           <h3 class="hidden" id="error">error</h3>
           <label for="tweet-text"></label>

@@ -7,16 +7,14 @@
 //// THIS IS THE SAME AS DOCUMENT.READY
 $(document).ready(function () {
   loadTweets();
-  $("form").on("submit", function(event) {
+  $("form").on("submit", function (event) {
     event.preventDefault();
     if (!$("#tweet-text").val()) {
-      $("#error")
-      .html("Your tweet is empty")
-      .show(2000, hideError);
+      $("#error").html("Your tweet is empty").show(2000, hideError);
     } else if ($("#tweet-text").val().length > 140) {
       $("#error")
-      .html("You have exceeded the character limit")
-      .show(2000, hideError);
+        .html("You have exceeded the character limit")
+        .show(2000, hideError);
     } else {
       $.ajax({
         method: "POST",
@@ -58,15 +56,17 @@ const createTweetElement = function (tweet) {
   let $tweet = `        
 <article> 
 <header id="top-of-tweet">
-  <img class="tweet-Avatar" src="${escape(tweet.user.avatars)}">
+  <div id="avatar-and-name"><img class="tweet-Avatar" src="${escape(
+    tweet.user.avatars
+  )}"> ${escape(tweet.user.name)}</div>
   <div class="tweet-user"> ${escape(tweet.user.handle)} </div>
 </header>
   <span class="article-content">
     <p>${escape(tweet.content.text)}</p>
   </span>
 <footer class="article-footer">
-  <span>${escape(tweet.created_at)}</span>
-  <div>
+  <span>${moment(tweet.created_at)}</span>
+  <div class="flags">
     <i class="fa fa-flag" aria-hidden="true"></i>
     <i class="fa fa-retweet" aria-hidden="true"></i>
     <i class="fa fa-heart" aria-hidden="true"></i>
@@ -77,11 +77,11 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 
-const escape =  function(str) {
-  let div = document.createElement('div');
+const escape = function (str) {
+  let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 const hideError = function () {
   setTimeout(function () {

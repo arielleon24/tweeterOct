@@ -6,9 +6,10 @@
   color: white;
   background-color: #4056A1 ;
   height: 120px;
-  padding: 1.5em;
+  padding: 1em;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
 }
 
@@ -21,7 +22,6 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 30px;
   align-items: center;
 }
 
