@@ -85,3 +85,8 @@ article:hover {
 article:hover .tweet-user {
   display: block;
 }
+
+.hidden {
+  display: none;
+  color: red;
+}

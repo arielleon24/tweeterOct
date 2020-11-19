@@ -4,69 +4,87 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
- 
-
- const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 //// THIS IS THE SAME AS DOCUMENT.READY
-$(() => {
-  
-})
-const renderTweets = function(tweets) {
-tweets.forEach (tweet => {
-  console.log(tweet)
-  let tweetsContainer = $('#posted-tweets')
-  let tweetElement = createTweetElement(tweet)
-  console.log(tweetElement)
-  tweetsContainer.prepend(tweetElement)
-  console.log(tweetsContainer)
-}) 
-}
+$(document).ready(function () {
+  loadTweets();
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+    if (!$("#tweet-text").val()) {
+      $("#error")
+      .html("Your tweet is empty")
+      .show(2000, hideError);
+    } else if ($("#tweet-text").val().length > 140) {
+      $("#error")
+      .html("You have exceeded the character limit")
+      .show(2000, hideError);
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $(this).serialize(),
+      })
+        .then(function () {
+          console.log("AJAX COMPLETED");
+          loadTweets();
+        })
+        .catch((err) => console.log(err));
+    }
+  });
+});
 
-const createTweetElement = function(tweet) {
-let $tweet = `        
+const loadTweets = function () {
+  $.ajax({
+    dataType: "json",
+    method: "GET",
+    url: "/tweets",
+  }).then(function (tweets) {
+    $("#posted-tweets").empty();
+    renderTweets(tweets);
+  });
+};
+
+const renderTweets = function (tweets) {
+  tweets.forEach((tweet) => {
+    console.log(tweet);
+    let tweetsContainer = $("#posted-tweets");
+    let tweetElement = createTweetElement(tweet);
+    console.log(tweetElement);
+    tweetsContainer.prepend(tweetElement);
+    console.log(tweetsContainer);
+  });
+};
+
+const createTweetElement = function (tweet) {
+  let $tweet = `        
 <article> 
 <header id="top-of-tweet">
-  <img class="tweet-Avatar" src="${tweet.user.avatars}">
-  <div class="tweet-user"> ${tweet.user.handle} </div>
+  <img class="tweet-Avatar" src="${escape(tweet.user.avatars)}">
+  <div class="tweet-user"> ${escape(tweet.user.handle)} </div>
 </header>
   <span class="article-content">
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
   </span>
 <footer class="article-footer">
-  <span>${tweet.created_at}</span>
+  <span>${escape(tweet.created_at)}</span>
   <div>
     <i class="fa fa-flag" aria-hidden="true"></i>
     <i class="fa fa-retweet" aria-hidden="true"></i>
     <i class="fa fa-heart" aria-hidden="true"></i>
   </div>
 </footer>
-</article>`
+</article>`;
 
-return $tweet;
+  return $tweet;
+};
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
 
-renderTweets(data);
+const hideError = function () {
+  setTimeout(function () {
+    $("#error").hide();
+  }, 2000);
+};
