@@ -13,6 +13,10 @@ button {
   font-family: 'Bungee', cursive;
 }
 
+button:hover {
+  transform: scale(1.1);
+}
+
 #underText {
   display: flex;
   justify-content: space-between;
@@ -55,7 +59,7 @@ article {
 
 .article-content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start
   width: 100%;
   margin: 10px;
 }
@@ -80,6 +84,7 @@ article {
 article:hover {
   opacity: 1;
   box-shadow: 3px 3px;
+  transform: scale(1.01)
 }
 
 article:hover .tweet-user {
