@@ -11,5 +11,13 @@ $(document).ready(function() {
       counter.removeClass("lessThan0");
     }
   })
+
+  const $button = $("#downArrow")
+$button.on("click", function(){
+  $(".new-tweet").slideToggle(function() {
+    $('.new-tweet').focus();
+  })
+})
+
 });
 

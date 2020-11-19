@@ -14,5 +14,10 @@
 
 #profileImage {
   border-radius: 50%;
-  height: 250px;
+  height: 220px;
+}
+
+#nameUnderAvatar {
+  font-size: 36px;
+  margin-top: 0px;
 }

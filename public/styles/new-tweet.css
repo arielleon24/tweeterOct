@@ -1,6 +1,6 @@
 .new-tweet {
   padding-top: 20px;
-  width: 100%
+  width: 100%;
 }
 
 .tweet-form {
@@ -38,8 +38,6 @@ button:hover {
   width: 100%;
   margin-top: 60px;
   flex-direction: column;
-  
-  
 }
 
 article {
@@ -59,7 +57,7 @@ article {
 
 .article-content {
   display: flex;
-  justify-content: flex-start
+  justify-content: flex-start;
   width: 100%;
   margin: 10px;
 }
