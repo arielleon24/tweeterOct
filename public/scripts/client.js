@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//// THIS IS THE SAME AS DOCUMENT.READY
 $(document).ready(function () {
   loadTweets();
   $("form").on("submit", function (event) {
@@ -22,7 +21,6 @@ $(document).ready(function () {
         data: $(this).serialize(),
       })
         .then(function () {
-          console.log("AJAX COMPLETED");
           loadTweets();
         })
         .catch((err) => console.log(err));
@@ -50,20 +48,22 @@ const renderTweets = function (tweets) {
   $("#tweet-text").val('');
 };
 
+///ESCAPE ONLY NEEDED IN THE CONTENT.TEXT since it is the only part that the user can input
+
 const createTweetElement = function (tweet) {
   let $tweet = `        
 <article> 
 <header id="top-of-tweet">
-  <div id="avatar-and-name"><img class="tweet-Avatar" src="${escape(
+  <div id="avatar-and-name"><img class="tweet-Avatar" src="${(
     tweet.user.avatars
-  )}"> ${escape(tweet.user.name)}</div>
-  <div class="tweet-user"> ${escape(tweet.user.handle)} </div>
+  )}"> ${(tweet.user.name)}</div>
+  <div class="tweet-user"> ${(tweet.user.handle)} </div>
 </header>
   <span class="article-content">
     <p>${escape(tweet.content.text)}</p>
   </span>
 <footer class="article-footer">
-  <span>${moment(tweet.created_at)}</span>
+  <span>${moment(tweet.created_at).fromNow()}</span>
   <div class="flags">
     <i class="fa fa-flag" aria-hidden="true"></i>
     <i class="fa fa-retweet" aria-hidden="true"></i>
