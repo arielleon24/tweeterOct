@@ -46,6 +46,7 @@ const renderTweets = function (tweets) {
     tweetsContainer.prepend(tweetElement);
   });
   $("#tweet-text").val('');
+  $(".counter").val(140);
 };
 
 ///ESCAPE ONLY NEEDED IN THE CONTENT.TEXT since it is the only part that the user can input
