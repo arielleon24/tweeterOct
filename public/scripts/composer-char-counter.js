@@ -1,3 +1,4 @@
+// function that counts the inputs in text area and manages errors if input incorrect
 $(document).ready(function() {
   $("#tweet-text").on("keyup",function() {
     let input = $(this);
@@ -12,12 +13,15 @@ $(document).ready(function() {
     }
   });
 
-  const $button = $("#downArrow")
-$button.on("click", function(){
-  $(".new-tweet").slideToggle(function() {
-    $('.new-tweet').focus();
-  })
-});
+
+  // toggle for the compose AREA found in the NAV
+
+const $button = $("#downArrow")
+  $button.on("click", function(){
+    $(".new-tweet").slideToggle(function() {
+      $('.new-tweet').focus();
+    })
+  });
 
 });
 

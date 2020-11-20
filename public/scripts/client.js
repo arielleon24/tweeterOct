@@ -43,13 +43,11 @@ const loadTweets = function () {
 
 const renderTweets = function (tweets) {
   tweets.forEach((tweet) => {
-    console.log(tweet);
     let tweetsContainer = $("#posted-tweets");
     let tweetElement = createTweetElement(tweet);
-    console.log(tweetElement);
     tweetsContainer.prepend(tweetElement);
-    console.log(tweetsContainer);
   });
+  $("#tweet-text").val('');
 };
 
 const createTweetElement = function (tweet) {
