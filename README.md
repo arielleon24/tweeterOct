@@ -17,7 +17,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Mobile view with compose"](https://github.com/arielleon24/tweeterOct/blob/main/public/images/mobile%20view%20with%20compose.png?raw=true)
 
-!["Desktop view with compose"](https://github.com/arielleon24/tweeterOct/blob/main/public/images/desktop%20view.png?raw=true)
+!["Mobile view after scrolling down"](https://github.com/arielleon24/tweeterOct/blob/main/public/images/mobile%20view%20after%20scrolling%20down.png?raw=true)
+
+!["Desktop view with compose"](https://github.com/arielleon24/tweeterOct/blob/main/public/images/desktop%20view%20updated.png?raw=true)
 
 ## Dependencies
 
