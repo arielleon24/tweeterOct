@@ -13,6 +13,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+!["Mode switch and typing"](https://github.com/arielleon24/tweeterOct/blob/main/public/images/tweeter1.gif?raw=true)
+
 !["Mobile view no compose"](https://github.com/arielleon24/tweeterOct/blob/main/public/images/mobile%20view%20without%20compose%20box.png?raw=true)
 
 !["Mobile view with compose"](https://github.com/arielleon24/tweeterOct/blob/main/public/images/mobile%20view%20with%20compose.png?raw=true)
