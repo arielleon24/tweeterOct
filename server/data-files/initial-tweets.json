@@ -13,6 +13,18 @@
   },
   {
     "user": {
+      "name": "Chewbacca Jackson",
+      "avatars": "/images/cheewy.png",
+      "handle": "@Wookie-ing4you"
+    },
+    "content": {
+      "text":
+        "GGWWWRGHH!"
+    },
+    "created_at": 1619677413397
+  },
+  {
+    "user": {
       "name": "Newton",
       "avatars": "https://i.imgur.com/73hZDYK.png",
       "handle": "@SirIsaac"
