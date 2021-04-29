@@ -1,6 +1,18 @@
 [
   {
     "user": {
+      "name": "Darth Vader",
+      "avatars": "/images/darthVader.png",
+      "handle": "@LordVader2You"
+    },
+    "content": {
+      "text":
+        "Can someone tell Luke I'm his Dad?"
+    },
+    "created_at": 1465116232227
+  },
+  {
+    "user": {
       "name": "Newton",
       "avatars": "https://i.imgur.com/73hZDYK.png",
       "handle": "@SirIsaac"
