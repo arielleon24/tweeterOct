@@ -8,6 +8,7 @@
   flex-direction: column;
   color: white;
   padding-top: 2.5em;
+  border-radius: 30%;
   background-color: #00b554;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
 }

@@ -149,4 +149,9 @@ body {
   background-color: #00b554;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
   }
+
+  #headerTop {
+    border-radius: 0%;
+    height: 300px;
+  }
 }
