@@ -51,6 +51,7 @@ button:hover {
 
 article {
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/black-scales.png"); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,6 +92,7 @@ article {
   display: none;
 }
 article:hover {
+  border-radius: 2%;
   opacity: 1;
   box-shadow: 4px 4px;
   transform: scale(1.01);

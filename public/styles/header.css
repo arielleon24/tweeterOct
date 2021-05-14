@@ -3,7 +3,6 @@
   display: flex;
   height: 400px;
   width: 100%;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   color: white;
@@ -15,9 +14,9 @@
 
 #profileImage {
   border-radius: 50%;
-  height: 160px;
+  height: 180px;
 }
 
 #nameUnderAvatar {
-  margin-top: 0px;
+  margin: 0;
 }
